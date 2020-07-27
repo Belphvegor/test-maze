@@ -1,33 +1,31 @@
 <?php
 $input = $_GET['S'];
+$S = (4 * $input) - 1;
 $c = 1;
 
-for ($a=1; $a <= $input; $a++) {
+for ($a=1; $a <= $S; $a++) {
     echo "@";
-    for ($b=2; $b <= $input; $b++) {
+    for ($b=2; $b <= $S; $b++) {
         if ($a % 2 == 1) {
-            // echo $a." ".$c;
            if ($a == $c) {
                 if ($b == 2) {
-                    echo "&nbsp;";
+                    echo " ";
                 } else {
                     echo "@";
                 }
            } else {
-                if ($b == $input - 1) {
-                    echo "&nbsp;";
+                if ($b == $S - 1) {
+                    echo " ";
                     $c+=2;
                 } else {
                     echo "@";
                 }
            }
         } else {
-            if ($b < $input) {
-                echo "&nbsp;";
+            if ($b < $S) {
+                echo " ";
             } else {
-                // echo "@".$a."".$c;
                 echo "@";
-
                 $c+=1;
             }
         }
